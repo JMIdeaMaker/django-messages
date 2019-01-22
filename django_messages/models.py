@@ -84,7 +84,7 @@ class Message(models.Model):
         return self.subject
 
     def get_absolute_url(self):
-        return ('messages_detail', [self.id])
+        return reverse('messages_detail', [self.id])
     get_absolute_url = reverse(get_absolute_url)
 
     def save(self, **kwargs):
